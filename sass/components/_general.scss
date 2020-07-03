@@ -71,14 +71,7 @@ header {
       padding-bottom: 94px;
   }
 }
-.projects {
-    @extend %main-container;
-    @include general;
-    @media screen and (min-width:1200px) {
-        padding-top: 94px;
-        padding-bottom: 94px;
-    }
-}
+
 footer {
     @extend %main-container;
     @include general;
@@ -92,4 +85,16 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
+}
+.projects {
+    @extend %main-container;
+    @include general;
+    @media screen and(max-width:1199px) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @media screen and(min-width:1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
