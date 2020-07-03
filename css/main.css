@@ -271,6 +271,13 @@ header {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .projects {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
 @media screen and (min-width: 480px) {
   footer {
     width: 480px;
