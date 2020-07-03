@@ -25,9 +25,6 @@
         left: 50%;
         transform: translate(-50%, -25%);
     }
-    @media screen and (min-width:768px) {
-        transform: translate(-50%, -50%);
-    }
 }
 .is-hidden {
     opacity: 0;
