@@ -74,6 +74,10 @@ header {
 .projects {
     @extend %main-container;
     @include general;
+    @media screen and (min-width:1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
 footer {
     @extend %main-container;
