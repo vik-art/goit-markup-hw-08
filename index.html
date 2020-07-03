@@ -21,29 +21,38 @@
                 <a href="./index.html" class="logo">
                     <span>Web </span>Studio
                 </a>
-                <ul class="site-navigation">
-                    <li><a href="./index.html" class="main-navigation active">Студия</a></li>
-                    <li><a href="./portfolio.html" class="main-navigation">Портфолио</a></li>
-                    <li><a href="#" class="main-navigation">Контакты</a></li>
-                </ul>
+                <button type="button" class="menu-button" aria-label="Переключатель мобильного меню"
+                    aria-expanded="false" aria-controls="menu-container" data-menu-button>
+                    <svg width="40" height="40">
+                        <use class="close-menu" href="./images/symbol-defs.svg#close"></use>
+                        <use class="open-menu" href="./images/symbol-defs.svg#menu"></use>
+                    </svg>
+                </button>
+                <div class="menu-navigation" id="menu-container" data-menu>
+                    <ul class="site-navigation">
+                        <li><a href="./index.html" class="main-navigation active">Студия</a></li>
+                        <li><a href="./portfolio.html" class="main-navigation">Портфолио</a></li>
+                        <li><a href="#" class="main-navigation">Контакты</a></li>
+                    </ul>
+                    <ul class="our-contacts">
+                        <li class="contact-navigation email">
+                            <div class="button">
+                                <svg class="button-icon" width="16" height="12">
+                                    <use href="./images/symbol-defs.svg#envelope"></use>
+                                </svg>
+                                info@devstudio.com
+                            </div>
+                        </li>
+                        <li class="contact-navigation telephone">
+                            <div class="button">
+                                <svg class="button-icon" width="10" height="15">
+                                    <use href="./images/symbol-defs.svg#smartphone"></use>
+                                </svg>
+                                +38 096 111 11 11
+                        </li>
+                    </ul>
+                </div>
             </nav>
-            <ul class="our-contacts">
-                <li class="contact-navigation email">
-                    <div class="button">
-                        <svg class="button-icon" width="16" height="12">
-                            <use href="./images/symbol-defs.svg#envelope"></use>
-                        </svg>
-                        info@devstudio.com
-                    </div>
-                </li>
-                <li class="contact-navigation telephone">
-                    <div class="button">
-                        <svg class="button-icon" width="10" height="15">
-                            <use href="./images/symbol-defs.svg#smartphone"></use>
-                        </svg>
-                        +38 096 111 11 11
-                </li>
-            </ul>
         </div>
     </header>
     <main>
@@ -189,7 +198,12 @@
                 <h2 class="section-heading">Наша команда</h2>
                 <ul class="command-list">
                     <li class="our-comand">
-                        <img src="./images/product-designer.jpg" alt="Николай Кучеренко" width="270" height="260">
+                        <div class="thumb">
+                            <img srcset="./images/team/pr-designer.jpg 1x,
+                            ./images/team/pr-designer@2x.jpg 2x,
+                            ./images/team/pr-designer@3x.jpg 3x
+                            " src="./images/team/pr-designer.jpg" alt="Николай Кучеренко">
+                        </div>
                         <h3>Николай Кучеренко</h3>
                         <p>Product Designer</p>
                         <ul class="social-links">
@@ -218,7 +232,13 @@
                         </ul>
                     </li>
                     <li class="our-comand">
-                        <img src="./images/frontend-developer.jpg" alt="Ольга Иванова" width="270" height="260">
+
+                        <div class="thumb">
+                            <img srcset="./images/team/front.jpg 1x,
+                            ./images/team/front@2x.jpg 2x,
+                            ./images/team/front@3x.jpg 3x
+                            " src="./images/team/front.jpg" alt="Ольга Иванова">
+                        </div>
                         <h3>Ольга Иванова</h3>
                         <p>Frontend Developer</p>
                         <ul class="social-links">
@@ -247,7 +267,13 @@
                         </ul>
                     </li>
                     <li class="our-comand">
-                        <img src="./images/marketing.jpg" alt="Андрей Шевченко" width="270" height="260">
+
+                        <div class="thumb">
+                            <img srcset="./images/team/marketing.jpg 1x,
+                            ./images/team/marketing@2x.jpg 2x,
+                            ./images/team/marketing@3x.jpg 3x
+                            " src="./images/team/marketing.jpg" alt="Андрей Шевченко">
+                        </div>
                         <h3>Андрей Шевченко</h3>
                         <p>Marketing</p>
                         <ul class="social-links">
@@ -276,7 +302,12 @@
                         </ul>
                     </li>
                     <li class="our-comand">
-                        <img src="./images/designer.jpg" alt="Иван Николаев" width="270" height="260">
+                        <div class="thumb">
+                            <img srcset="./images/team/designer.jpg 1x,
+                            ./images/team/designer@2x.jpg 2x,
+                            ./images/team/designer@3x.jpg 3x
+                            " src="./images/team/designer.jpg" alt="Иван Николаев">
+                        </div>
                         <h3>Иван Николаев</h3>
                         <p>UI Designer</p>
                         <ul class="social-links">
@@ -338,7 +369,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-adress">
-                    <a href="./index.html" class="logo smaller-type">
+                    <a href="./index.html" class="logo footer-logo">
                         <span>Web </span>Studio
                     </a>
                     <address>
@@ -347,7 +378,7 @@
                         <p><span>+38 099 111 11 11 </span></p>
                     </address>
                 </div>
-                <div class="footer-sosial">
+                <div class="sosial-links">
                     <p class="footer-links">Присоединяйтесь</p>
                     <ul class="footer-social">
                         <li><a href="" aria-label="Instagram link">
@@ -374,22 +405,23 @@
                             </a></li>
                     </ul>
                 </div>
-                <div class="footer-form">
-                    <p class="footer-links">подпишитесь на рассылку</p>
-                    <form class="subscription">
-                        <input type="email" name="email" placeholder="E-mail">
-                        <button type="submit">Подписаться
-                            <svg class="send" width="24" height="24">
-                                <use href="./images/symbol-defs.svg#send"></use>
-                            </svg>
+            </div>
+            <div class="footer-form">
+                <p class="footer-links">подпишитесь на рассылку</p>
+                <form class="subscription">
+                    <input type="email" name="email" placeholder="E-mail">
+                    <button type="submit">Подписаться
+                        <svg class="send" width="24" height="24">
+                            <use href="./images/symbol-defs.svg#send"></use>
+                        </svg>
 
-                        </button>
-                    </form>
-                </div>
+                    </button>
+                </form>
             </div>
         </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 
 </html>

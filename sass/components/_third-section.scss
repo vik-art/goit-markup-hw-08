@@ -1,0 +1,100 @@
+.section-heading {
+    @extend %header;
+    @include headling;
+    margin-bottom: 30px;
+}
+.our-comand h3,p {
+    font-family: $main-font;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+.social-links {
+    @extend %list;
+    display: flex;
+    justify-content: center;
+    & li+li {
+        margin-left: 10px;
+    }
+}
+.social-links a {
+    @extend %link;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: #AFB1B8;
+
+    transition: background-color 250ms $cubic-bezier, color 250ms $cubic-bezier;
+&:hover,
+&:focus
+ {
+    background-color: $accent-bg-color;
+    color: $white-text-color;
+ }
+}
+.social {
+    fill: currentColor;
+}
+.command-list {
+    @extend %list;
+    @media screen and (min-width:768px) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+        justify-content: space-around;
+    }
+}
+.our-comand {
+    width: 100%;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    padding-bottom: 37px;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+    @media screen and(max-width:767px){
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+        @media screen and (min-width:768px) {
+            width: calc((100% - 4 * 15px) / 2);
+            margin: 15px;
+            height: 422px;
+        }
+        @media screen and (min-width:1200px) {
+            width: calc((100% - 8 * 15px) / 4);
+        }
+     h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: $primary-text-color;
+     }
+     p {
+        font-weight: 400;
+        color: $secondary-text-color;
+        margin-top: 0;
+        margin-bottom: 16px;
+     }
+}
+.thumb {
+    height: 320px;  
+    img {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+    @media screen and (min-width:768px){
+        width: 354px;
+        height: 260px;
+    }
+    @media screen and (min-width:1200px){
+        width: 270px;
+        height: 260px;
+    }
+}  

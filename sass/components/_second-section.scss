@@ -1,0 +1,36 @@
+.goals {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    padding-right: 0;
+    padding-left: 0;
+    ul {
+        @extend %list;
+    display: flex;
+    margin-top: 50px;
+    }
+}
+.section-heading {
+    @extend %font-type;
+}
+.heading-type {
+    @extend %font-type;
+}
+.white {
+    display: inline-block;
+    min-width: 370px;
+    padding: 28px 15px;
+    text-align: center;
+
+    color: $white-text-color;
+    background: rgba(47, 48, 58, 0.8);
+}
+.goals li+li {
+    margin-left: 30px;
+}
+.small-container {
+    position: relative;
+}
+.small-container p {
+    position: absolute;
+    bottom: 0;
+}

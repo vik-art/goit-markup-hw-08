@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    padding:0;
+}
+header {
+    @extend %main-container;
+    @include general;
+    position: relative;
+}
+.container {
+    @media screen and (min-width:1200px) {
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+.main-banner {
+    @media screen and (min-width:480px) {
+        width: 480px;
+    }
+    @media screen and (min-width:768px) {
+        width: 768px;
+    }
+    @media screen and (min-width:1200px) {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+.first-section {
+    @extend %main-container;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include general;
+    @media screen and (min-width:1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+}
+.goals {
+    @extend %main-container;
+    @media screen and (max-width:1199px) {
+        display: none;
+    }
+}
+.third-section {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $secondary-bg-color;
+    @include general;
+    @media screen and(min-width:1200px) {
+        width: 100%;
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+}
+.clients {
+    @extend %main-container;
+    padding-top: 60px;
+    padding-bottom: 60px;
+ h2 {
+    margin-bottom: 50px;
+ }
+  @include general;
+  @media screen and (min-width:1200px) {
+      padding-top: 94px;
+      padding-bottom: 94px;
+  }
+}
+.projects {
+    @extend %main-container;
+    @include general;
+}
+footer {
+    @extend %main-container;
+    @include general;
+}
+.portfolio-h {
+    margin: 0 auto;
+    border-bottom: 1px solid #ECECEC;
+    @include general;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
