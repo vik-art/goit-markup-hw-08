@@ -6,6 +6,9 @@ header {
     @extend %main-container;
     @include general;
     position: relative;
+    @media screen and(max-width:767px) {
+        height: 60px;
+    }
 }
 .container {
     @media screen and (min-width:1200px) {
@@ -62,9 +65,6 @@ header {
     @extend %main-container;
     padding-top: 60px;
     padding-bottom: 60px;
- h2 {
-    margin-bottom: 50px;
- }
   @include general;
   @media screen and (min-width:1200px) {
       padding-top: 94px;
@@ -78,13 +78,19 @@ footer {
 }
 .portfolio-h {
     margin: 0 auto;
-    border-bottom: 1px solid #ECECEC;
     @include general;
+    position: relative;
+    border-bottom: 1px solid #ECECEC;
+    border-width: 100%;
 }
 img {
     display: block;
     max-width: 100%;
     height: auto;
+}
+h1, h2, h3, h4, p, ul {
+    margin: 0;
+    padding: 0;
 }
 .projects {
     @extend %main-container;

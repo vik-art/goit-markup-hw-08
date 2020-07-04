@@ -18,7 +18,10 @@ footer {
     color: $white-text-color;
     padding: 0;
     text-align: center;
-    margin: 0;
+    margin-bottom: 20px;
+    @media screen and (min-width: 768px) {
+       margin-right: 0;        
+    }
 }
 .footer-content {
     @media screen and (min-width: 768px) {
@@ -26,13 +29,12 @@ footer {
         justify-content: space-around;        
     }
     @media screen and (min-width: 1200px) {
-        width: 40%;
+        width: 45%;
         justify-content: space-between;
     }
 }
 address p {
     @extend %text-font;
-    margin-top: 20px;
     margin-bottom: 8px;
     color: $white-text-color;
     font-style: normal;
@@ -52,6 +54,7 @@ address span {
     @extend %font-type;
     color: $white-text-color;
     text-transform: uppercase;
+    margin-bottom: 20px;
     @media screen and(min-width:1200px){
         text-align: start;
     }
@@ -134,6 +137,9 @@ address span {
     }
     @media screen and (min-width:768px) {
         width: 450px;
+    }
+    @media screen and (min-width:1200px) {
+        width: 357px;
     }
     &::placeholder {
     font-family: Roboto;

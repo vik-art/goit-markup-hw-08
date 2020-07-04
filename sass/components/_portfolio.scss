@@ -90,7 +90,7 @@
     letter-spacing: 0.03em;
 }
 .filters {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     ul {
     @extend %list;
     display: flex;
@@ -103,6 +103,9 @@
     @media screen and (min-width: 768px) {
         flex-wrap: nowrap;
         justify-content: center;
+    }
+    @media screen and(min-width:1200px) {
+        margin-bottom: 50px;
     }
     }
 }
@@ -123,9 +126,10 @@
 .example {
     @extend %list;
     border: 1px solid #EEEEEE;
-    margin-bottom: 30px;
-
     transition: box-shadow 250ms $cubic-bezier;
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
     @media screen and (min-width:768px) {
         width: calc((100% - 4 * 15px) / 2);
         margin: 15px;

@@ -103,6 +103,12 @@ header {
   }
 }
 
+@media screen and (max-width: 767px) {
+  header {
+    height: 60px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
@@ -216,10 +222,6 @@ header {
   padding-bottom: 60px;
 }
 
-.clients h2 {
-  margin-bottom: 50px;
-}
-
 @media screen and (min-width: 480px) {
   .clients {
     width: 480px;
@@ -273,7 +275,9 @@ header {
 
 .portfolio-h {
   margin: 0 auto;
+  position: relative;
   border-bottom: 1px solid #ECECEC;
+  border-width: 100%;
 }
 
 @media screen and (min-width: 480px) {
@@ -302,6 +306,11 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+h1, h2, h3, h4, p, ul {
+  margin: 0;
+  padding: 0;
 }
 
 @media screen and (min-width: 480px) {
@@ -350,17 +359,12 @@ img {
   color: #212121;
 }
 
-@media screen and (min-width: 480px) {
-  .logo {
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
+.logo span {
+  color: #2196F3;
 }
 
 @media screen and (min-width: 768px) {
   .logo {
-    padding-top: 26px;
-    padding-bottom: 26px;
     margin-right: 81px;
   }
 }
@@ -372,10 +376,6 @@ img {
     margin-left: 0;
     font-size: 26px;
   }
-}
-
-.logo span {
-  color: #2196F3;
 }
 
 .menu-button {
@@ -414,21 +414,22 @@ img {
 }
 
 .container-nav {
+  width: 100%;
+  height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
   .container-nav {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    height: 80px;
   }
 }
 
@@ -437,6 +438,7 @@ img {
     display: none;
     position: absolute;
     top: 100%;
+    width: 100%;
     left: 0;
     right: 0;
     text-align: center;
@@ -444,8 +446,6 @@ img {
     padding-top: 60px;
     z-index: 10;
     background: #FFFFFF;
-    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 4px 8px rgba(0, 0, 0, 0.04);
-            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 4px 8px rgba(0, 0, 0, 0.04);
   }
 }
 
@@ -481,10 +481,17 @@ img {
 
 .site-navigation a {
   color: #212121;
-  padding: 0;
+  display: inline-block;
   -webkit-box-flex: 3;
       -ms-flex-positive: 3;
           flex-grow: 3;
+}
+
+@media screen and (min-width: 768px) {
+  .site-navigation a {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 @media screen and (min-width: 480px) {
@@ -513,10 +520,6 @@ img {
   .site-navigation li:not(:last-child) {
     margin-right: 50px;
   }
-  .site-navigation a {
-    padding-top: 32px;
-    padding-bottom: 32px;
-  }
 }
 
 .our-contacts {
@@ -526,6 +529,12 @@ img {
   font-size: 18px;
   line-height: 1.2;
   letter-spacing: 0.02em;
+}
+
+@media screen and (max-width: 767px) {
+  .our-contacts .email {
+    margin-bottom: 16px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -542,9 +551,6 @@ img {
             align-items: flex-start;
     font-size: 12px;
   }
-}
-
-@media screen and (max-width: 1199px) {
   .our-contacts li + li {
     margin-top: 10px;
   }
@@ -560,6 +566,7 @@ img {
   }
   .our-contacts li + li {
     margin-left: 30px;
+    margin-top: 0;
   }
 }
 
@@ -594,7 +601,7 @@ img {
 }
 
 @media screen and (max-width: 767px) {
-  .menu-navigation li:not(:last-child) {
+  .site-navigation li:not(:last-child) {
     margin-bottom: 40px;
   }
 }
@@ -680,7 +687,7 @@ img {
   color: #FFFFFF;
   font-weight: 900;
   font-size: 26px;
-  line-height: 1.3;
+  line-height: 1.6;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -713,6 +720,7 @@ img {
 .heading-type {
   color: #212121;
   text-align: center;
+  margin-bottom: 10px;
   text-transform: uppercase;
 }
 
@@ -742,6 +750,10 @@ img {
         flex-wrap: wrap;
     margin: -15px;
   }
+}
+
+.list-item:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -795,7 +807,6 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 50px;
 }
 
 .white {
@@ -828,6 +839,13 @@ img {
   letter-spacing: 0.03em;
   color: #212121;
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section-heading {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }
 
 .our-comand h3, p {
@@ -1059,7 +1077,13 @@ footer {
   color: #FFFFFF;
   padding: 0;
   text-align: center;
-  margin: 0;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-logo {
+    margin-right: 0;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1074,7 +1098,7 @@ footer {
 
 @media screen and (min-width: 1200px) {
   .footer-content {
-    width: 40%;
+    width: 45%;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -1082,7 +1106,6 @@ footer {
 }
 
 address p {
-  margin-top: 20px;
   margin-bottom: 8px;
   color: #FFFFFF;
   font-style: normal;
@@ -1105,6 +1128,7 @@ address span {
 .footer-links {
   color: #FFFFFF;
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1232,6 +1256,12 @@ address span {
 @media screen and (min-width: 768px) {
   .subscription > input {
     width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscription > input {
+    width: 357px;
   }
 }
 
@@ -1631,7 +1661,7 @@ textarea {
 }
 
 .filters {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .filters ul {
@@ -1656,6 +1686,12 @@ textarea {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filters ul {
+    margin-bottom: 50px;
   }
 }
 
@@ -1687,11 +1723,14 @@ textarea {
 
 .example {
   border: 1px solid #EEEEEE;
-  margin-bottom: 30px;
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.example:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {

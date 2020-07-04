@@ -2,6 +2,10 @@
     @extend %header;
     @include headling;
     margin-bottom: 30px;
+    @media screen and(min-width:1200px) {
+        font-size: 36px;
+        margin-bottom: 50px;
+    }
 }
 .our-comand h3,p {
     font-family: $main-font;

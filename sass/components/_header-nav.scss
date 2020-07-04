@@ -1,21 +1,6 @@
 .logo {
     @extend %link;
     display: inline-block;
-    @media screen and (min-width:480px) {
-        padding-top: 16px;
-        padding-bottom: 16px;
-    }
-    @media screen and (min-width: 768px) {
-        padding-top: 26px;
-        padding-bottom: 26px;
-        margin-right: 81px;
-    }
-    @media screen and (min-width: 1200px) {
-        padding-top: 24px;
-        padding-bottom: 24px;
-        margin-left: 0;
-        font-size: 26px;
-    }
     font-family: 'Raleway', sans-serif;
     font-size: 24px;
     line-height: 1.2;
@@ -25,6 +10,15 @@
     color: $primary-text-color;
         span {
             color: $accent-text-color;
+    }
+    @media screen and (min-width: 768px) {
+        margin-right: 81px;
+    }
+    @media screen and (min-width: 1200px) {
+        padding-top: 24px;
+        padding-bottom: 24px;
+        margin-left: 0;
+        font-size: 26px;
     }
 }
 .menu-button {
@@ -54,18 +48,22 @@
     display: none;
 }
 .container-nav {
+    width: 100%;
+    height: 60px;
     display: flex;
     align-items: center;
-    flex-basis: 100%;
-    @media screen and (max-width:767px) {
-        justify-content: space-between;
+    justify-content: space-between;
+    @media screen and(min-width:768px) {
+        height: 80px;
     }
+   
 }
 .menu-navigation {
     @media screen and (max-width:767px){
     display: none;
     position: absolute;
     top: 100%;
+    width: 100%;
     left: 0;
     right: 0;
     text-align: center;
@@ -74,7 +72,6 @@
     z-index: 10;
 
     background: #FFFFFF;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 4px 8px rgba(0, 0, 0, 0.04);
     }
     @media screen and (min-width:768px) {
         display: flex;
@@ -98,8 +95,12 @@
     a {
         @extend %link;
         color: $primary-text-color;
-        padding: 0;
+       display: inline-block;
         flex-grow: 3;
+        @media screen and(min-width:768px){
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
 }
 @media screen and (min-width: 480px) {
     @include navigation; 
@@ -114,23 +115,22 @@
     li:not(:last-child) {
         margin-right: 50px;
     }
-    a {
-        padding-top: 32px;
-        padding-bottom: 32px;
-    }
 }
 }
 .our-contacts {
     @extend %list;
     color: $secondary-text-color;
-    @include navigation;        
+    @include navigation;   
+    @media screen and (max-width:767px) {
+        .email {
+            margin-bottom: 16px;
+        }
+    }     
     @media screen and (min-width:768px) {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         font-size: 12px;
-    }
-    @media screen and (max-width:1199px){
         li + li {
             margin-top: 10px;
         }
@@ -140,6 +140,7 @@
         flex-direction: row;
         li+li {
             margin-left: 30px;
+            margin-top: 0;
         }
     }
 }
@@ -157,13 +158,14 @@
         @media screen and (max-width:767px) {
         left: 50%;
         top: 26px;
-        transform: translateX(-50%); }
+        transform: translateX(-50%); 
+    }
         @media screen and (min-width:768px) {
-            bottom: 0;
+        bottom: 0;
         }
     }
     }
-.menu-navigation li:not(:last-child) {
+.site-navigation li:not(:last-child) {
     @media screen and (max-width:767px) {
     margin-bottom: 40px;
     }
