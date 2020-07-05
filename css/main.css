@@ -663,21 +663,21 @@ h1, h2, h3, h4, p, ul {
   }
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 768px) {
   .main-banner {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url(../images/tablet-img.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/tablet-img.jpg);
   }
 }
 
-@media screen and (min-width: 576px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 576px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .main-banner {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url(../images/tablet-2x-img.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/tablet-2x-img.jpg);
   }
 }
 
-@media screen and (min-width: 576px) and (min-width: 960px) {
+@media screen and (min-width: 768px) and (min-width: 1200px) {
   .main-banner {
     max-width: 1600px;
     height: 600px;
@@ -687,7 +687,7 @@ h1, h2, h3, h4, p, ul {
   }
 }
 
-@media screen and (min-width: 576px) and (min-width: 960px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 576px) and (min-width: 960px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 768px) and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-width: 1200px) and (min-resolution: 2dppx) {
   .main-banner {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url(../images/desktop-2x.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/desktop-2x.jpg);
@@ -837,12 +837,6 @@ h1, h2, h3, h4, p, ul {
 
 .small-container {
   position: relative;
-}
-
-@media screen and (min-width: 1200px) {
-  .small-container {
-    height: 294px;
-  }
 }
 
 .small-container p {
