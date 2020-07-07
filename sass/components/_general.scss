@@ -20,6 +20,11 @@ header {
     }
 }
 .main-banner {
+    @media screen and(max-width:767px){
+        &.is-none {
+            display: none;
+        }
+    }
     @media screen and (min-width:480px) {
         width: 480px;
     }
