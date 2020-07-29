@@ -1,65 +1,66 @@
 .logo {
-    @extend %link;
-    display: inline-block;
-    font-family: 'Raleway', sans-serif;
-    font-size: 24px;
-    line-height: 1.2;
-    font-weight: 700;
-    letter-spacing: 0.03em;
+  @extend %link;
+  display: inline-block;
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0.03em;
 
-    color: $primary-text-color;
-        span {
-            color: $accent-text-color;
-    }
-    @media screen and (min-width: 768px) {
-        margin-right: 81px;
-    }
-    @media screen and (min-width: 1200px) {
-        padding-top: 24px;
-        padding-bottom: 24px;
-        margin-left: 0;
-        font-size: 26px;
-    }
+  color: $primary-text-color;
+  span {
+    color: $accent-text-color;
+  }
+  @media screen and (min-width: 768px) {
+    margin-right: 81px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-left: 0;
+    font-size: 26px;
+  }
 }
 .menu-button {
-    @extend %button;
-    @media screen and (min-width: 768px) {
-        display: none;
-      }
-      color: $primary-text-color;
+  @extend %button;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  color: $primary-text-color;
 }
 .menu-button .close-menu {
-    display: none;
-    fill: currentColor;
-    &:hover, &:focus {
-        fill: $accent-text-color;
-    }
+  display: none;
+  fill: currentColor;
+  &:hover,
+  &:focus {
+    fill: $accent-text-color;
+  }
 }
 .menu-button .open-menu {
-    fill: currentColor;
-    &:hover, &:focus {
-        fill: $accent-text-color;
-    }
+  fill: currentColor;
+  &:hover,
+  &:focus {
+    fill: $accent-text-color;
+  }
 }
 .menu-button.is-open .close-menu {
-    display: block;
+  display: block;
 }
 .menu-button.is-open .open-menu {
-    display: none;
+  display: none;
 }
 .container-nav {
-    width: 100%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #ECECEC;
-    @media screen and(min-width:768px) {
-        height: 80px;
-    }   
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media screen and(min-width:768px) {
+    height: 80px;
+  }
 }
 .menu-navigation {
-    @media screen and (max-width:767px){
+  @media screen and (max-width: 767px) {
     display: none;
     position: absolute;
     top: 100%;
@@ -70,119 +71,115 @@
     padding-bottom: 60px;
     padding-top: 60px;
     z-index: 10;
-    background: #FFFFFF;
-    }
-    @media screen and (min-width:768px) {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-grow: 3;
-    }
+    background: #ffffff;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 3;
+  }
 }
 .menu-navigation.is-open {
-    display: block;
-    
+  display: block;
 }
 .site-navigation {
-    @extend %list;
-    transition: color 250ms $cubic-bezier;
-    &:hover, 
-    &:focus,
-    &:active
-    {
-        color: $accent-text-color;
+  @extend %list;
+  transition: color 250ms $cubic-bezier;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $accent-text-color;
+  }
+  a {
+    @extend %link;
+    color: $primary-text-color;
+    display: inline-block;
+    flex-grow: 3;
+    @media screen and(min-width:768px) {
+      padding-top: 32px;
+      padding-bottom: 32px;
     }
-    a {
-        @extend %link;
-        color: $primary-text-color;
-       display: inline-block;
-        flex-grow: 3;
-        @media screen and(min-width:768px){
-            padding-top: 32px;
-            padding-bottom: 32px;
-        }
-}
-@media screen and (min-width: 480px) {
-    @include navigation; 
-}
-@media screen and (max-width: 767px) {
+  }
+  @media screen and (min-width: 480px) {
+    @include navigation;
+  }
+  @media screen and (max-width: 767px) {
     margin-bottom: 60px;
-
-}
-@media screen and (min-width: 768px){
+  }
+  @media screen and (min-width: 768px) {
     display: flex;
     font-size: 14px;
     li:not(:last-child) {
-        margin-right: 50px;
+      margin-right: 50px;
     }
-}
+  }
 }
 .our-contacts {
-    @extend %list;
-    color: $secondary-text-color;
-    @include navigation;   
-    @media screen and (max-width:767px) {
-        .email {
-            margin-bottom: 16px;
-        }
-    }     
-    @media screen and (min-width:768px) {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        font-size: 12px;
-        li + li {
-            margin-top: 10px;
-        }
+  @extend %list;
+  color: $secondary-text-color;
+  @include navigation;
+  @media screen and (max-width: 767px) {
+    .email {
+      margin-bottom: 16px;
     }
-    @media screen and (min-width: 1200px) {
-        font-size: 14px;
-        flex-direction: row;
-        li+li {
-            margin-left: 30px;
-            margin-top: 0;
-        }
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 12px;
+    li + li {
+      margin-top: 10px;
     }
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    flex-direction: row;
+    li + li {
+      margin-left: 30px;
+      margin-top: 0;
+    }
+  }
 }
 .main-navigation.active {
-    color: $accent-text-color;
-    position: relative;
-    &::after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 4px;
-        background: $accent-bg-color;
-        border-radius: 2px;
-        position: absolute;
-        @media screen and (max-width:767px) {
-        left: 50%;
-        top: 26px;
-        transform: translateX(-50%); 
+  color: $accent-text-color;
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: $accent-bg-color;
+    border-radius: 2px;
+    position: absolute;
+    @media screen and (max-width: 767px) {
+      left: 50%;
+      top: 26px;
+      transform: translateX(-50%);
     }
-        @media screen and (min-width:768px) {
-        bottom: 0;
-        }
+    @media screen and (min-width: 768px) {
+      bottom: 0;
     }
-    }
+  }
+}
 .site-navigation li:not(:last-child) {
-    @media screen and (max-width:767px) {
+  @media screen and (max-width: 767px) {
     margin-bottom: 40px;
-    }
+  }
 }
 .button {
-    @extend %button;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  @extend %button;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    transition: color 250ms $cubic-bezier;
-&:hover {
+  transition: color 250ms $cubic-bezier;
+  &:hover {
     color: $accent-text-color;
-}
-
+  }
 }
 .button-icon {
-    margin-right: 10px;
-    fill: currentColor;
+  margin-right: 10px;
+  fill: currentColor;
 }
